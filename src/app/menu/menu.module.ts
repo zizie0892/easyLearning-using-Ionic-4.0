@@ -13,16 +13,16 @@ const routes: Routes = [
     component: MenuPage,
     children:[
       {
-        path:'account',
-        loadChildren:'../account/account.module#AccountModule'
+        path:'home',
+        loadChildren:'../dashboard/dashboard.module#DashboardPageModule'
       },
       {
         path:'category',
-        loadChildren:'../category/category.module#CategoryModule'
+        loadChildren:'../category/category.module#CategoryPageModule'
       },
       {
         path:'help',
-        loadChildren:'../help/help.module#HelpModule'
+        loadChildren:'../help/help.module#HelpPageModule'
       }
     ]
   }

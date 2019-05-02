@@ -11,8 +11,16 @@ export class MenuPage implements OnInit {
   selectedPath= '';
   pages=[
     {
-      title:'Account',
-      url:'/menu/account'
+      title:'Home',
+      url:'/menu/dashboard'
+    },
+    {
+      title:'Category',
+      url:'/menu/category'
+    },
+    {
+      title:'Help',
+      url:'/menu/help'
     }
   ]
 
