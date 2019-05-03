@@ -21,27 +21,8 @@ import {
 } from './dashboard.page';
 
 const routes: Routes = [{
-  path: 'tabs',
+  path: '',
   component: DashboardPage,
-  children: [
-    {
-      path:'tab1',
-      loadChildren:'../category/category.module#CategoryPageModule'
-    },
-    {
-      path:'tab2',
-      loadChildren:'../cart/cart.module#CartPageModule' 
-    },
-    {
-      path:'tab3',
-      loadChildren:'../account/account.module#AccountPageModule' 
-    }
-  ]
-},
-{
-  path:'',
-  redirectTo:'tabs/tab1',
-  pathMatch:'full'
 }
 ];
 
