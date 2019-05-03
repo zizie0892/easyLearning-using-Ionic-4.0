@@ -10,9 +10,6 @@ import {
 import {
   AuthenticateService
 } from '../services/authentication.service';
-import {
-  IonInput,IonList,IonSlides
-} from '@ionic/angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,23 +18,12 @@ import {
 })
 export class DashboardPage implements OnInit {
   
-  @ViewChild('slideWithNav') slideWithNav: IonSlides;
-  
-  slider: any;
+
   userEmail: string;
 
-  slideOptsOne= {
-    initialSlide: 0,
-    slidesPerView: 1,
-    autoplay: true
-  };
-  constructor(
-    private navCtrl: NavController,
-    private authService: AuthenticateService
-  ) {}
   
+  constructor(private navCtrl: NavController,private authService: AuthenticateService) {}
   
-
   ngOnInit() {
 
     if (this.authService.userDetails()) {

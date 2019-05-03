@@ -1,5 +1,7 @@
 {
   "name": "easyLearning",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
