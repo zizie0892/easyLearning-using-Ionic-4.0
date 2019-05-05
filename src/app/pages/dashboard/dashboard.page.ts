@@ -5,8 +5,8 @@ import {
 } from '@angular/core';
 import {
   NavController,
-  ModalController
-} from '@ionic/angular';
+  ModalController,
+  IonSlides} from '@ionic/angular';
 import {
   AuthenticateService
 } from '../services/authentication.service';
@@ -17,13 +17,17 @@ import {
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  
 
   userEmail: string;
+  slideOpts= {
+    loop: true, // have to add loop = true, otherwise when reach to last slide if will all the way back to first, not just smooth slide to first
+    };
+    slidesDidLoad(slides:IonSlides) {
+    slides.startAutoplay();
+    }
+  constructor(private navCtrl: NavController, private authService: AuthenticateService) {}
+  
 
-  
-  constructor(private navCtrl: NavController,private authService: AuthenticateService) {}
-  
   ngOnInit() {
 
     if (this.authService.userDetails()) {

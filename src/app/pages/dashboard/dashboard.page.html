@@ -8,5 +8,13 @@
 </ion-header>
 
 <ion-content padding>
-  <img src="/src/assets/images/1.jpg.jpg">
+  <!---<img  src="https://wfsu.org/education/wp-content/uploads/2018/04/rtl-banner-700x394.Rev2_.jpg.resize.710x399.jpg">-->
+  <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" pager="true" [options]="slideOpts">
+    <ion-slide>
+    <img style="max-height: auto;" src="https://wfsu.org/education/wp-content/uploads/2018/04/rtl-banner-700x394.Rev2_.jpg.resize.710x399.jpg">
+    </ion-slide>
+    <ion-slide>
+    <img style="max-height: auto;" src="https://images.twinkl.co.uk/tw1n/image/private/t_630/image_repo/65/df/T-N-1204-Year-3-Maths-Themed-We-are-learning-how-to-Display-Banner-Pack_ver_1.jpg">
+    </ion-slide>
+    </ion-slides>
 </ion-content>
